@@ -1,0 +1,15 @@
+server:
+  port: ${server_port:8003}
+
+spring:
+  cloud: 
+    config:
+      uri: ${config_servers:http://localhost:9001}
+      searchPaths: webhook-bus
+---
+spring:
+  application:
+    name: webhook-bus
+  profiles:
+    active: local
+    include: common
