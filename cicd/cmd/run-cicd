@@ -17,7 +17,7 @@ if [ "${profile}" == "dev" ] || [ "${profile}" == "prod" ]; then
 	echo "# Clear all"
 	echo "${basedir}/cicd/cmd/clear-all-with-config ${basedir}"
 	echo ""
-	read -n 1 -p "# Do you want to continue?(y.n) ... " cont
+	read -n 1 -p "# Do you want to continue?(y/n) ... " cont
 	echo ""
 	if [ "${cont}" != "y" ]; then exit 0; fi
 
